@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request
+import json
 
 app = Flask(__name__)
 
@@ -13,8 +14,8 @@ def index():
 		params_str = ''
 		for key in params.keys():
 			params_str += 'key: {}, value: {}<br>'.format(key, params[key])
-			print(params_str)
-			return 'POST'
+		
+		print(params_str)
 
 
     return 'Hello Worlkd!'
