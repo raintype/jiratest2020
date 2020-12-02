@@ -6,9 +6,15 @@ app = Flask(__name__)
 @app.route('/', methods = ['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        issue = request.form['issue']
-        print(issue)
-        return 'POST'
+        params = json.loads(request.get_data(), encoding='utf-8')
+		if len(params) == 0:
+			return 'No parameter'
+
+		params_str = ''
+		for key in params.keys():
+			params_str += 'key: {}, value: {}<br>'.format(key, params[key])
+			print(params_str)
+			return 'POST'
 
 
     return 'Hello Worlkd!'
