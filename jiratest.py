@@ -4,9 +4,12 @@ from flask import Flask, request
 app = Flask(__name__)
 
 @app.route('/', methods = ['POST', 'GET'])
-def index(request):
+def index():
     if request.method == 'POST':
+        issue = request.form['issue']
+        print(issue)
         return 'POST'
+
 
     return 'Hello Worlkd!'
 
