@@ -14,7 +14,7 @@ def index():
 
 		params_str = ''
 		for key in params.keys():
-			params_str += 'key: {}, value: {}<br>'.format(key, params[key])
+			params_str += '{} : {}\r'.format(key, params[key])
 
 		print(params_str)
 	return 'Hello Worlkd!'
