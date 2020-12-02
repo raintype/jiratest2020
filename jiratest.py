@@ -16,7 +16,7 @@ def index():
 		# params_str = ''
 		# for key in params.keys():
 		# 	params_str += 'key: {}, value: {}<br>'.format(key, params[key])
-		print("Project Key: {}".form(params['issue']['fields']['project']['key']))
+		print("Project Key: {}".format(params['issue']['fields']['project']['key']))
 		print("id: {}".format(params['issue']['id']))
 		print("status: {}".format(params['issue']['fields']['status']['name']))
 		# print(params_str)
